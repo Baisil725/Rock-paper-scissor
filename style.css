@@ -59,7 +59,7 @@ button{
     border-radius: 15px;
     border: none;
     transition: 0.3s;
-    background: linear-gradient(to right, #240b36, #c31432);
+    background: linear-gradient(to right, #190a05, #870000,#190a05);
     background-size: 200%;
     color: #fff;
 }
@@ -71,5 +71,10 @@ button:hover{
     width: 31%;*/
     transform: scale(1.05);
     background-position: center right;
-    border: 2px solid #fff;
+    border: 2px solid #aa0000;
+}
+
+button:active{
+    translate: 4px 4px;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.5);
 }
