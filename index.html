@@ -9,12 +9,18 @@
 </head>
 <body>
     <div class="container">
-        <div class="score"></div>
+        <div class="score">ROCK - PAPER - SCISSOR</div>
         <div class="play-field">
-            <div class="computer">Computer :</div>
-            <div class="user">You :</div>
+            <div class="computer" id="computer">
+                <div id="top">Computer : </div>
+                <div id="choice"></div>
+            </div>
+            <div class="user" id="user">
+                <div id="utop">You : </div>
+                <div id="choice2"></div>
+            </div>
         </div>
-        <div class="buttons">
+        <div class="buttons" id="buttons">
             <button id="rock">Rock</button>
             <button id="paper">Paper</button>
             <button id="scissor">Scissor</button>
