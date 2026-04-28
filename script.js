@@ -3,6 +3,7 @@ const utop = document.getElementById('utop');
 const input = document.getElementById('buttons');
 const ch = document.getElementById('choice');
 const cho = document.getElementById('choice2');
+const pf = document.getElementById('play-field');
 let cPoint = 0;
 let uPoint = 0;
 let rps = '';
@@ -52,7 +53,26 @@ input.addEventListener('click', function(event){
             }
             else{
                 cPoint ++;
-            }       
+            }
+
+        /*if(cPoint === 10){
+            pf.textContent = 'Computer Wins';
+        }
+        else if(uPoint === 10){
+            pf.textContent = 'You Win';
+        }*/
+
+        if (cPoint === 10 || uPoint === 10) {
+            const message = cPoint === 10 ? 'COMPUTER WINS!' : 'YOU WIN!';
+            
+            pf.setAttribute('data-winner', message);
+            
+            pf.classList.add('winner-announcement');
+            
+            input.style.pointerEvents = 'none';
+        }
+
+        
         ctop.textContent = 'Computer : '+cPoint;
         utop.textContent = 'You : '+uPoint;
     }
